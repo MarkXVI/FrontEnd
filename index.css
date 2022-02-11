@@ -1,3 +1,63 @@
 body {
     background: #45b7f4;
 }
+
+.lab1 {
+    color: white;
+    position: relative;
+    left: 18%; 
+    background: rgb(18, 0, 119);
+    width: 60%;
+    padding: 2%;
+    text-align: center;
+    border: 3px black solid;
+    border-radius: 15px;
+    box-shadow: 15px 10px rgba(0,0,0,0.1)
+}
+
+.lab1 button {
+    color: white;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #168d60;
+    border: 3px black solid;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: fit-content;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 5px 3px rgba(0,0,0,0.5);
+}
+  
+.lab1 button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.lab1 button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.lab1 button:hover span {
+    padding-right: 25px;
+}
+  
+.lab1 button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.lab1 button:active {
+    background-color: #0a412c;
+    box-shadow: 2px 0 rgba(0,0,0,0.5);
+    transform: translateY(4px);
+}
