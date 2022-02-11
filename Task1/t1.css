@@ -1,0 +1,57 @@
+.portrait {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 20%;
+}
+
+.content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.content#image {
+    height: auto;
+    width: 40%;
+}
+
+p{
+    text-align:center; 
+    margin: 0;
+}
+
+table{
+    width: 100%;
+    border: 15px solid transparent;
+    border-image: linear-gradient(to right, purple, pink);
+    border-image-slice: 1;
+}
+
+th, td {
+    border: 1px solid red;
+    border-radius: 5px;
+    text-align: center;
+}
+
+td.file {
+    background: radial-gradient(#45b7f4, #9981db)
+}
+
+h1 {
+    text-align: center;
+}
+
+body{
+    background: linear-gradient(to bottom, #9981db 85%, #45b7f4); 
+}
+
+.footer {
+    position: relative; 
+    height: 300px; 
+    margin-top: 100px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}

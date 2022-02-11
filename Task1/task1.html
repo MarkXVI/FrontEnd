@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artsy Mark</title>
+    <link rel="stylesheet" href="t1.css">
+</head>
+<body>
+
+    <h1>Hello world! <br>Mark "Artsy" Harvey here!</h1>
+
+    <image src="./resources/Me.JPG" class="portrait"></image>
+
+    <br>
+    <p style="text-align:center; margin-bottom: 1px;">Personal Media Biography</p>
+    <table>
+        <tr>
+          <th width="25%">Soundfile Name(s)</td>
+          <th width="25%">Text Description WHY</td>
+          <th width="50%">Embeded MP3 File and source link</td>
+        </tr>
+        <tr>
+            <td>Chilled Tea</td>
+            <td>This is my spotify playlist. I have a very eclectic taste in music, so the genres vary greatly.</td>
+            <td class="file">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7M4JvhrY6ELTuo4jij1NXH?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>lofi hip hop music - beats to relax/study to</td>
+            <td>This is a playlist I often listen to when I need to focus.</td>
+            <td class="file">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>Doctor Who - Stonehenge Monologue</td>
+            <td>This is one of my favorite scenes from Doctor Who.</td>
+            <td class="file">
+                <audio controls src="./resources/dr_who_speech.mp3" class="content"></audio>
+                <a href="https://www.youtube.com/watch?v=Pa74e8oAvIM&ab_channel=DoctorWho">Click here to see source.</a>
+            </td>
+        </tr>
+        <tr>
+            <th>Image Name(s)</td>
+            <th>Text Description WHY</td>
+            <th>Embeded Image File and source link</td>
+        </tr>
+        <tr>
+            <td>Fantasy Floating Islands</td>
+            <td>This is a painting made by me. It was inspired by the movie 
+                "<a href="https://www.imdb.com/title/tt0092067/">Laputa: Castle in the sky</a>" 
+                by Hayao Miyazaki from Studio Ghibli.</td>
+            <td class="file">
+                <a href="https://www.instagram.com/p/CXqc4mYI7IM/"><Image src="./resources/art.jpg" class="content" id="image"></Image></a>
+                <p>Click on the image to see it on Instagram</p>
+            </td>
+          </tr>
+          <tr>
+              <td>Computer</td>
+              <td>This is the computer that I built myself that I am currently using to do my everything computer related.</td>
+              <td class="file">
+                <Image controls src="./resources/computer.jpg" class="content" id="image"></Image>
+            </td>
+          </tr>
+          <tr>
+            <td>Chevy Imapala 67'</td>
+            <td>This is a dream car of mine and also it is from the TV series 
+                "<a href="https://www.imdb.com/title/tt0092067/">Supernatural</a>" by Eric Kripke.</td>
+            <td class="file">
+                <Image controls src="./resources/impala67.jpg" class="content" id="image"></Image>
+            </td>
+        </tr>
+        <tr>
+            <th>Video Name(s)</td>
+            <th>Text Description WHY</td>
+            <th>Embeded Video File and source link</td>
+        </tr>
+        <tr>
+            <td>Helsingborg</td>
+            <td>I live in helsingborg, hence the video of Helsingborg.</td>
+            <td class="file">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ov2bVPUNsfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>How you like them apples?</td>
+            <td>This is one of my favorite scenes from one of my favorite movies.
+                "<a href="https://www.imdb.com/title/tt0119217/?ref_=nv_sr_srsg_0">Good Will Hunting</a>" 
+                by Gus Van Sant.
+            </td>
+            <td class="file">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gcZPWkNY6x8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td>Helsingborg Half-Marathon finishline</td>
+            <td>
+                This is a video of me running through the finishline in helsingborg after a half-marathon. 
+                My finishing time was 2 hours 1 minute and 26 seconds.
+            </td>
+            <td class="file">
+                <video width="560" height="315" controls src="./resources/HBG-HM.mkv" class="content"></video>
+                <a href="https://www.youtube.com/watch?v=uvR9Sr2uWuc&t=9431s&ab_channel=HelsingborgMarathon"><p>Click Here to see full video on Youtube. </p></a>
+            </td>
+        </tr>
+        <tr>
+            <th>3d Model Name(s)</td>
+            <th>Text Description WHY</td>
+            <th>Embeded GLB/GLFT File</td>
+        </tr>
+        <tr>
+            <td>Standard red 6 sided dice</td>
+            <td>I chose this 3d model because I created it using a 3D modeling software called Blender.</td>
+            <td class="file"> 
+                <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+                <model-viewer alt="Dice" src="./resources/dice.gltf" ar ar-modes="webxr scene-viewer quick-look" 
+                seamless-poster shadow-intensity="1" camera-controls class="content" style="padding: 1em;"></model-viewer>             
+            </td>
+        </tr>
+    </table>
+
+    <h1>Summary</h1>
+    <p>
+        My name is Mark Harvey and I am a very active and creative person! <br>
+        I love to try new things and I am always up for a challenge!
+    </p>
+    <br>
+
+
+
+    <div class="footer">
+        <link rel="stylesheet" href="../egg.css">
+        <div class="css-egg" id="bottomCenter"></div>
+    </div>
+    <p>^^^ By the way, this is Hank ^^^</p>
+
+</body>
+</html>
