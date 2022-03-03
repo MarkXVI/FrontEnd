@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yourname</title>
+
+    <script src="quiz.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form name="quiz" id="quiz" onsubmit="return validate();">
+        <div>
+            <input name="fname" class="input" placeholder="John" required>
+            <input name="lname" class="input" placeholder="Smith" required>
+            <input name="email" class="input" placeholder="example@example.com" required>
+        </div>
+
+        <div class="questions" id="q1">
+            <h4>Question 1: What gender do you consider yourself?</h4>
+            <input type="radio" id="Male" name="1">
+            <label for="Male">Male</label><br>
+            <input type="radio" id="Female" name="1">
+            <label for="Female">Female</label><br>
+            <input type="radio" id="Other" name="1">
+            <label for="Other">Other</label><br>
+        </div>
+
+        <div class="questions" id="q2">
+            <h4>Question 2: What/ which colours do you like?</h4>
+            <input type="checkbox" id="Purple" name="2">
+            <label for="Purple">Purple</label><br>
+            <input type="checkbox" id="Green" name="2">
+            <label for="Green">Green</label><br>
+            <input type="checkbox" id="Yellow" name="2">
+            <label for="Yellow">Yellow</label><br>
+        </div>
+
+        <div class="questions" id="q3">
+            <h4>Question 3: What do you do as a pastime?</h4>
+            <textarea id="answer" name="3" placeholder="Enter your answer here." required></textarea>
+        </div>
+
+        <br>
+
+        <div>
+            <div>
+                <input name="reset" type="reset" value="Reset" class="btn">
+            </div>
+            
+            <br>
+            
+            <div>
+                <input name="submit" type="submit" value="Submit" class="btn">
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

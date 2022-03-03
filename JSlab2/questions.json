@@ -1,0 +1,30 @@
+
+{
+    "Questions": {
+        "1": {
+            "Question": "",
+            "Answer": "",
+            "DummyAnswers": ["", ""]
+        },
+        "2": {
+            "Question": "",
+            "Answer": "",
+            "DummyAnswers": ["", ""]
+        },
+        "3": {
+            "Question": "",
+            "Answer": "",
+            "DummyAnswers": ["", ""]
+        },
+        "4": {
+            "Question": "",
+            "Answer": "",
+            "DummyAnswers": ["", ""]
+        },
+        "5": {
+            "Question": "",
+            "Answer": "",
+            "DummyAnswers": ["", ""]
+        }
+    }
+}

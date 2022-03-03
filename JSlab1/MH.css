@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto');
+
+body {
+    background-color: rgb(178, 135, 235);
+}
+
+.main {
+    padding: 50px;
+    margin: 0;
+    height: 100%;
+}
+
+.name {
+    color: #fff;
+	display: flex;
+	font-family: 'Anton', sans-serif;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	perspective: 1000px; 
+	margin-bottom: 50px;
+}
+
+.name span {
+	
+	display: inline-flex;
+	font-size: 100px;
+	user-select: none;
+	line-height: .8;
+    animation: rotate 1s ease-out;
+}
+
+.name span:hover {
+    animation: 1s running;
+}::after{
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+	20%, 80% {
+		transform: rotateY(180deg);
+	}
+	
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+.info {
+    border: 1px solid rgb(46, 0, 58);
+    border-radius: 5px;
+    background: rgba(162, 56, 189, 0.342);
+    padding: 20px;
+    text-align: center;
+}
