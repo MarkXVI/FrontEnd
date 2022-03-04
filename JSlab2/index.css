@@ -2,7 +2,7 @@ body {
     background: rgba(170, 104, 167, 0.568);
 }
 
-.quiz {
+form {
     border: 1px solid black;
     border-radius: 5px;
     font-size: 17px;
@@ -14,5 +14,16 @@ body {
     border: 1px solid rgb(122, 122, 122);
     border-radius: 5px;
     margin-top: 50px;
+    margin-bottom: 50px;
 
+}
+
+form#constants input {
+    width: 30%;
+}
+
+form#buttons {
+    display: inline;
+    width: fit-content;
+    margin: 20px;
 }

@@ -1,30 +1,29 @@
 
-{
-    "Questions": {
-        "1": {
-            "Question": "",
-            "Answer": "",
-            "DummyAnswers": ["", ""]
-        },
-        "2": {
-            "Question": "",
-            "Answer": "",
-            "DummyAnswers": ["", ""]
-        },
-        "3": {
-            "Question": "",
-            "Answer": "",
-            "DummyAnswers": ["", ""]
-        },
-        "4": {
-            "Question": "",
-            "Answer": "",
-            "DummyAnswers": ["", ""]
-        },
-        "5": {
-            "Question": "",
-            "Answer": "",
-            "DummyAnswers": ["", ""]
-        }
+[
+    {
+        "Question": "What gender do you consider yourself?",
+        "Answer": "Male",
+        "DummyAnswers": ["Female", "Other"],
+        "Type": "radio"
+    },
+    {
+        "Question": "What/ which colours do you like?",
+        "Answer": ["Purple", "Green", "Yellow"],
+        "Type": "checkbox"
+    },
+    {
+        "Question": "What do you do as a pastime?",
+        "Answer": "",
+        "Type": "textarea"
+    },
+    {
+        "Question": "",
+        "Answer": "",
+        "Type": ""
+    },
+    {
+        "Question": "",
+        "Answer": "",
+        "Type": ""
     }
-}
+]
