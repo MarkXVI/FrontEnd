@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h2 class="quizHeader">Take a Quiz!</h2>
+  
+	<table style="width:583px">
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">1. Quiz question #1</p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">correct answer 1</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">2. Quiz question #2</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">correct answer 2</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>wrong answer</label>
+	    	</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">3. Quiz question #3</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3">correct answer 3</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>wrong answer</label>
+	    	</ul>
+		</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">4. Quiz question #4</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">correct answer 4</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div>
+	  </td>
+	</tr>
+	</table>
+<br/>
+  <div class="submitter">
+          <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+          type="submit" value="Submit" />
+    </div>
+  
+<!--show only wrong answers on submit-->
+    <div class="quizAnswers" id="correctAnswer1"></div>
+	    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+
+<!--show score upon submit-->
+    <div>
+    	<h2 class="quizScore" id="userScore"></h2>
+    </div>
+	</div>
+
+
+    <script src="quiz.js"></script>
+</body>
+</html>

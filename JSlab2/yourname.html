@@ -5,17 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yourname</title>
-
-    <script src="quiz.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body onload="loadQuestions()">
 
     <form class="Quiz-Form">
         <div id="constant">
-            <input type="text" name="fname" placeholder="John">
-            <input type="text" name="lname" placeholder="Smith">
-            <input type="text" name="email" placeholder="example@example.com">
+            <input type="text" name="fname" placeholder="John" required>
+            <input type="text" name="lname" placeholder="Smith" required>
+            <input type="email" name="email" placeholder="example@example.com" required>
         </div>
 
         <!-- <div id="q1">
@@ -45,9 +43,7 @@
 
         <br>
 
-        <div class="questionButtons"></div>
 
-        <div class="questions"></div>
 
         <br>
 
@@ -61,7 +57,7 @@
     <div class="results">
         <h2>Form Data</h2>
         <pre></pre>
-      </div>
-
+    </div>
+    <script src="quiz.js"></script>
 </body>
 </html>

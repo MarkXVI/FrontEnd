@@ -36,7 +36,7 @@ const loadQuestions = () => {
 
     for(let i = 0;i < questions.length; i++)
     {
-        BTNS += `<button class="qbtn" onclick="OpenTab("${i+1}")">Q${i+1}</button>`;
+        BTNS += `<button type="button" class="tablinks" onclick="OpenTab(event, "${i+1}")">Q${i+1}</button>`;
 
     };
     
@@ -44,11 +44,19 @@ const loadQuestions = () => {
 
     for(let i = 0; i < questions.length; i++)
     {
-        QUES += 
-        `<div id="${i+1}" class="question" style="display:none;">
-        <h2>Question ${i+1}</h2>
-        <p>${questions[i].Question}</p>
-        </div>`;
+        if (i > 0) {
+            QUES += 
+            `<div id="${i+1}" class="question" style="display: none;">
+            <h2>Question ${i+1}</h2>
+            <p>${questions[i].Question}</p>
+            </div>`;
+        } else {
+            QUES += 
+            `<div id="${i+1}" class="question active">
+            <h2>Question ${i+1}</h2>
+            <p>${questions[i].Question}</p>
+            </div>`;
+        };
     };
 
     writeHTML(BTNS, QUES);
@@ -56,25 +64,33 @@ const loadQuestions = () => {
 };
 
 const writeHTML = (buttons, questions) => {
-    const btns = document.querySelector('.questionButtons');
+    const btns = document.querySelector('.tab');
     btns.innerHTML = buttons;
-    const div = document.querySelector('.questions');
+    const div = document.querySelector('.tabContent');
     div.innerHTML = questions;
 };
 
-function OpenTab(tab) {
-    const x = document.getElementsByClassName("questions");
-    for (let i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+function OpenTab(event, tabName) {
+    let i, tabContent, tablinks;
+
+    tabContent = document.getElementsByClassName("tabContent");
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
     };
-    document.getElementById(tab).style.display = "block";
+  
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    };
+  
+    document.getElementById(tabName).style.display = "block";
+    event.currentTarget.className += " active";
 };
 
 function validate(event) {
+
     event.preventDefault();
-  
     const data = new FormData(event.target);
-    
     const formJSON = Object.fromEntries(data.entries());
 
     if (!(isName(formJSON.name))) {
@@ -86,23 +102,23 @@ function validate(event) {
         alert(formJSON.email + ' is not a valid email');
         return;
     };
-
-  
     
     const results = document.querySelector('.results pre');
     results.innerText = JSON.stringify(formJSON, null, 2);
 
+    // return false;
 };
 
-const form = document.querySelector('.Quiz-Form');
-form.addEventListener('Submit', validate(this.onSubmit));
+document.querySelector('.Quiz-Form').addEventListener('Submit', function(event) {
+    validate(event);
+});
 
 function isName(name) {
     const letters = /^[A-Za-z]+$/;
-    return letters.test(String(name).toLowerCase());
+    return letters.test(String(name).toLowerCase()) && name != null;
 };
 
 function isEmail(email) {
-    let regex = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)*$/;
-    return regex.test(String(email).toLowerCase());
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 };
