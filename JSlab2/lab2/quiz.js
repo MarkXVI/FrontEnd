@@ -14,7 +14,7 @@ const questions = [
     {
         type: "textarea",
         question: "Question 3: What is the Swedish National Dish?",
-        correctText: "meatballs"
+        correctText: "meatball"
     }
 
 ];
@@ -76,7 +76,10 @@ const validateAnswer = () => {
         } 
         if (questions[questionNr-1].answers[questions[questionNr-1].correct-1] == check[0].id) {
             result += 1;
-        }
+            alert('Correct!');
+        } else {
+            alert(`Correct answer was ${questions[questionNr-1].answers[questions[questionNr-1].correct-1]}`);
+        }      
 
         answered.radio = check[0].id;
 
@@ -102,7 +105,7 @@ const validateAnswer = () => {
             return;
         };
 
-
+        alert(`The Correct answers were ${questions[questionNr-1].correctList} => You answered ${checklist}`);
         answered.checkbox = checklist;
 
     };
@@ -114,7 +117,10 @@ const validateAnswer = () => {
         }
         if (check.includes(questions[questionNr-1].correctText)) {
             result += 1;
-        };
+            alert('Correct!');
+        } else {
+            alert(`For a Correct answer you needed to include the word(s) ${questions[questionNr-1].correctText}`);
+        }
 
         answered.textarea = check;
     };
@@ -177,8 +183,10 @@ function Show() {
 
 const ShowResults = () => {
     
-    question.innerText = `Your result was ${result} out of ${questions.length}`;
+    question.innerText = `Your result was ${result} out of ${questions.length}!`;
+    question.style.color = 'black';
     answers.innerText = 'Your answers were: ' + JSON.stringify(answered, null, 2);
+    answers.style.textAlign = 'left';
 }
 
 Show();
