@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+function getAge(dob) {
+    let year = Number(dob.substr(0, 4));
+    let month = Number(dob.substr(4, 2)) - 1;
+    let day = Number(dob.substr(6, 2));
+    let today = new Date();
+    let age = today.getFullYear() - year;
+    if (today.getMonth() < month || (today.getMonth() ==   month && today.getDate() < day)) {
+        age--;
+    }
+    return age;
+};
+
+function sortByAge(arr) {
+    arr.sort((a, b) => a.age - b.age);
+};
+
+let James = { id: 1, name: "James", DoB: '19961126' };
+let Mark = { id: 2, name: "Mark", DoB: '19990521' };
+let Julia = { id: 3, name: "Julia", DoB: '19981203' };
+
+
+let arr = [ Julia, Mark, James ];
+
+for (let i = 0; i < arr.length; i++) {
+    let age = getAge(arr[i].DoB);
+    arr[i].age = age;
+};
+
+sortByAge(arr);
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+};
+  
+    </script>
+</body>
+</html>

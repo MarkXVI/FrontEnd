@@ -5,8 +5,8 @@ const signale = require('signale');
 
 const PORT = process.env.PORT || 1337;
 
-const read = require('/routes/read');
-const pages = require('/routes/pages');
+const read = require('./routes/read');
+const pages = require('./routes/pages');
 
 app.use(express.json());
 app.use(express.static('public'));
