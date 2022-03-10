@@ -1,0 +1,20 @@
+[
+    {
+        "type": "radio",
+        "question": "Question 1: What is the Capital of Sweden?",
+        "answers": ["Kristianstad", "Stockholm", "Mora", "Kiruna"],
+        "correct": 2
+    },
+    {
+        "type": "checkbox",
+        "question": "Question 2: What color(s) is/are on the Swedish flag?",
+        "answers": ["Red", "Blue", "Yellow", "Green"],
+        "correctList": ["Blue", "Yellow"]
+    },
+    {
+        "type": "textarea",
+        "question": "Question 3: What is the Swedish National Dish?",
+        "correctText": "meatball"
+    }
+
+]
