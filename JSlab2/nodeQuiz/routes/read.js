@@ -3,18 +3,16 @@ const path = require('path');
 
 const fs = require('fs');
 
-router.get('/dir', (req, res) => {
-    let dirList = await new Promise((resolve, reject) => {
-        fs.readdir(dpath, (err, contents) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(contents);
-          }
-        });
-      });
-    
-    res.send(files);
+router.get('/dir', async (req, res) => {
+  let dirList = await new Promise((resolve, reject) => {
+    fs.readdir(path.resolve(__dirname, '../resources'), (err, contents) => {
+      if (err) {
+        reject(err);
+      } else {
+        res.send(contents);
+      };
+    });
+  });
 });
 
 router.get('/file', (req, res) => {

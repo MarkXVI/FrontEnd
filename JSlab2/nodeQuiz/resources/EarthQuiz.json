@@ -1,0 +1,20 @@
+[
+    {
+        "type": "radio",
+        "question": "Question 1: What is the name of the point of the Earth where at noon (local time) you are closer to the people in the  International Space Station than any other person on Earth?",
+        "answers": ["No Mans Land", "Point Nemo", "North Pole", "South Pole"],
+        "correct": 2
+    },
+    {
+        "type": "checkbox",
+        "question": "Question 2: The Earth is MOSTLY made up of;",
+        "answers": ["Iron", "Magnesium", "Silicon", "Oxygen"],
+        "correctList": ["Iron", "Oxygen"]
+    },
+    {
+        "type": "textarea",
+        "question": "Question 3: How much of the Earths surface is covered in water? (percent %)",
+        "correctText": "70"
+    }
+
+]
