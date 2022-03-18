@@ -11,12 +11,8 @@ const boxGeometry = new THREE.BoxGeometry( 1, 1, 1 );
 const boxMaterial = new THREE.MeshBasicMaterial( { color: color} );
 var cube = new THREE.Mesh( boxGeometry, boxMaterial );
 
-const lineMaterial = new THREE.LineDashedMaterial( {
+const lineMaterial = new THREE.LineBasicMaterial( {
 	color: color,
-	linewidth: 1,
-	scale: 1,
-	dashSize: 3,
-	gapSize: 1,
 } );
 
 const points = [];
